@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>用户信息接口 | TianGou后端接口文档</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="学习使用 VuePress">
+    
+    <link rel="preload" href="/tiangouVuepress/assets/css/0.styles.6e506ac8.css" as="style"><link rel="preload" href="/tiangouVuepress/assets/js/app.dca5d79a.js" as="script"><link rel="preload" href="/tiangouVuepress/assets/js/2.be4ad1e4.js" as="script"><link rel="preload" href="/tiangouVuepress/assets/js/10.074543d3.js" as="script"><link rel="prefetch" href="/tiangouVuepress/assets/js/3.420b117e.js"><link rel="prefetch" href="/tiangouVuepress/assets/js/4.236a038c.js"><link rel="prefetch" href="/tiangouVuepress/assets/js/5.95d78c8c.js"><link rel="prefetch" href="/tiangouVuepress/assets/js/6.89720e2e.js"><link rel="prefetch" href="/tiangouVuepress/assets/js/7.b0d7b2eb.js"><link rel="prefetch" href="/tiangouVuepress/assets/js/8.b711b674.js"><link rel="prefetch" href="/tiangouVuepress/assets/js/9.0afd7dc2.js">
+    <link rel="stylesheet" href="/tiangouVuepress/assets/css/0.styles.6e506ac8.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/tiangouVuepress/" class="home-link router-link-active"><!----> <span class="site-name">TianGou后端接口文档</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>查询轮播图</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>商品查询</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>用户信息</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/tiangouVuepress/userInfo/userInfo.html" aria-current="page" class="active sidebar-link">用户信息接口</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/tiangouVuepress/userInfo/userInfo.html#获取所有用户信息" class="sidebar-link">获取所有用户信息</a></li><li class="sidebar-sub-header"><a href="/tiangouVuepress/userInfo/userInfo.html#用户注册发送验证码" class="sidebar-link">用户注册发送验证码</a></li><li class="sidebar-sub-header"><a href="/tiangouVuepress/userInfo/userInfo.html#注册" class="sidebar-link">注册</a></li><li class="sidebar-sub-header"><a href="/tiangouVuepress/userInfo/userInfo.html#用户登录" class="sidebar-link">用户登录</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="用户信息接口"><a href="#用户信息接口" class="header-anchor">#</a> 用户信息接口</h1> <h2 id="获取所有用户信息"><a href="#获取所有用户信息" class="header-anchor">#</a> 获取所有用户信息</h2> <ul><li>请求方式<strong>GET</strong></li> <li>请求地址<strong>http:10.7.178.116:3000/user</strong></li> <li>请求参数 无</li> <li>返回参数
+<ul><li>成功<div class="language-json extra-class"><pre class="language-json"><code>status<span class="token operator">:</span><span class="token number">0</span><span class="token punctuation">,</span>
+message<span class="token operator">:</span>'获取成功'<span class="token punctuation">,</span>
+data<span class="token punctuation">,</span>
+</code></pre></div></li> <li>失败<div class="language-json extra-class"><pre class="language-json"><code>status<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">,</span>
+message<span class="token operator">:</span>err<span class="token punctuation">,</span>
+</code></pre></div></li></ul></li></ul> <h2 id="用户注册发送验证码"><a href="#用户注册发送验证码" class="header-anchor">#</a> 用户注册发送验证码</h2> <ul><li>请求方式<strong>GET</strong></li> <li>请求地址<strong>http:10.7.178.116:3000/user/getMailCode</strong></li> <li>请求参数(用于接受验证码的邮箱)<div class="language-json extra-class"><pre class="language-json"><code>params<span class="token operator">:</span><span class="token punctuation">{</span>
+    email=xxx@qq.com<span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li>返回参数
+<ul><li>成功</li></ul> <div class="language-json extra-class"><pre class="language-json"><code>status<span class="token operator">:</span><span class="token number">0</span><span class="token punctuation">,</span>
+message<span class="token operator">:</span>'发送验证码成功'<span class="token punctuation">,</span>
+</code></pre></div><ul><li>失败</li></ul> <div class="language-json extra-class"><pre class="language-json"><code>status<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">,</span>
+message<span class="token operator">:</span>'发送失败'<span class="token punctuation">,</span>
+</code></pre></div></li></ul> <h2 id="注册"><a href="#注册" class="header-anchor">#</a> 注册</h2> <ul><li>请求方式<strong>POST</strong></li> <li>请求地址<strong>http:10.7.178.116:3000/user/register</strong></li> <li>请求参数<div class="language-json extra-class"><pre class="language-json"><code>body<span class="token operator">:</span><span class="token punctuation">{</span>
+    username='用户名字'<span class="token punctuation">,</span>
+    password='用户密码'<span class="token punctuation">,</span>
+    code='验证码'<span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li>返回参数
+<ul><li>成功</li></ul> <div class="language-json extra-class"><pre class="language-json"><code>status<span class="token operator">:</span><span class="token number">0</span><span class="token punctuation">,</span>
+message<span class="token operator">:</span>'注册成功'<span class="token punctuation">,</span>
+</code></pre></div><ul><li>失败</li></ul> <div class="language-json extra-class"><pre class="language-json"><code>status<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">,</span>
+message<span class="token operator">:</span>err(具体失败信息)<span class="token punctuation">,</span>
+</code></pre></div></li></ul> <h2 id="用户登录"><a href="#用户登录" class="header-anchor">#</a> 用户登录</h2> <ul><li>请求方式<strong>POST</strong></li> <li>请求地址<strong>http:10.7.178.116:3000/user/signin</strong></li> <li>请求参数(用于接受验证码的邮箱)</li></ul> <div class="language-json extra-class"><pre class="language-json"><code>  body<span class="token operator">:</span><span class="token punctuation">{</span>
+  username='用户名字'<span class="token punctuation">,</span>
+  password='用户密码'<span class="token punctuation">,</span>
+  <span class="token punctuation">}</span>
+</code></pre></div><ul><li>返回参数
+<ul><li>成功（token后面身份验证标识）</li></ul> <div class="language-json extra-class"><pre class="language-json"><code>status<span class="token operator">:</span><span class="token number">0</span><span class="token punctuation">,</span>
+message<span class="token operator">:</span>'登录成功'<span class="token punctuation">,</span>
+token<span class="token operator">:</span>'Bearer '+tokenStr<span class="token punctuation">,</span>
+</code></pre></div><ul><li>失败</li></ul> <div class="language-json extra-class"><pre class="language-json"><code>status<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">,</span>
+message<span class="token operator">:</span>err(具体失败信息)<span class="token punctuation">,</span>
+</code></pre></div></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/tiangouVuepress/product/product.html" class="prev">
+        商品接口
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/tiangouVuepress/assets/js/app.dca5d79a.js" defer></script><script src="/tiangouVuepress/assets/js/2.be4ad1e4.js" defer></script><script src="/tiangouVuepress/assets/js/10.074543d3.js" defer></script>
+  </body>
+</html>
