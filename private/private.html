@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>私有接口 | TianGou后端接口文档</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="学习使用 VuePress">
+    
+    <link rel="preload" href="/tiangouVuepress/assets/css/0.styles.6e506ac8.css" as="style"><link rel="preload" href="/tiangouVuepress/assets/js/app.e2521a8e.js" as="script"><link rel="preload" href="/tiangouVuepress/assets/js/2.be4ad1e4.js" as="script"><link rel="preload" href="/tiangouVuepress/assets/js/8.131f703c.js" as="script"><link rel="prefetch" href="/tiangouVuepress/assets/js/10.285fc864.js"><link rel="prefetch" href="/tiangouVuepress/assets/js/11.d6e99e17.js"><link rel="prefetch" href="/tiangouVuepress/assets/js/3.9cc6e23f.js"><link rel="prefetch" href="/tiangouVuepress/assets/js/4.236a038c.js"><link rel="prefetch" href="/tiangouVuepress/assets/js/5.95d78c8c.js"><link rel="prefetch" href="/tiangouVuepress/assets/js/6.89720e2e.js"><link rel="prefetch" href="/tiangouVuepress/assets/js/7.927639a3.js"><link rel="prefetch" href="/tiangouVuepress/assets/js/9.eef77b50.js">
+    <link rel="stylesheet" href="/tiangouVuepress/assets/css/0.styles.6e506ac8.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/tiangouVuepress/" class="home-link router-link-active"><!----> <span class="site-name">TianGou后端接口文档</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>查询轮播图</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>商品查询</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>用户信息</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>私有接口</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/tiangouVuepress/private/private.html" aria-current="page" class="active sidebar-link">私有接口</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/tiangouVuepress/private/private.html#获取用户信息" class="sidebar-link">获取用户信息</a></li><li class="sidebar-sub-header"><a href="/tiangouVuepress/private/private.html#更改用户头像" class="sidebar-link">更改用户头像</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="私有接口"><a href="#私有接口" class="header-anchor">#</a> 私有接口</h1> <h2 id="获取用户信息"><a href="#获取用户信息" class="header-anchor">#</a> 获取用户信息</h2> <ul><li>请求方式<strong>GET</strong></li> <li>请求地址<strong>http:10.7.178.116:3000/my/user</strong></li> <li>请求参数<div class="language-json extra-class"><pre class="language-json"><code>headers<span class="token operator">:</span><span class="token punctuation">{</span>
+   <span class="token property">&quot;Authorization&quot;</span><span class="token operator">:</span>token
+<span class="token punctuation">}</span>
+params<span class="token operator">:</span><span class="token punctuation">{</span>
+    name='商品名称'<span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li>返回参数
+<ul><li>成功<div class="language-json extra-class"><pre class="language-json"><code>status<span class="token operator">:</span><span class="token number">0</span><span class="token punctuation">,</span>
+message<span class="token operator">:</span>'获取成功'<span class="token punctuation">,</span>
+data<span class="token operator">:</span> <span class="token punctuation">{</span>
+    username<span class="token punctuation">,</span>
+    avatarUrl<span class="token punctuation">,</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+</code></pre></div></li> <li>失败<div class="language-json extra-class"><pre class="language-json"><code>status<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">,</span>
+message<span class="token operator">:</span>err<span class="token punctuation">,</span>
+</code></pre></div></li></ul></li></ul> <h2 id="更改用户头像"><a href="#更改用户头像" class="header-anchor">#</a> 更改用户头像</h2> <ul><li>请求方式<strong>POST</strong></li> <li>请求地址<strong>http:10.7.178.116:3000/my/ava</strong></li> <li>请求参数(名字，密码，头像地址)<div class="language-json extra-class"><pre class="language-json"><code>params<span class="token operator">:</span><span class="token punctuation">{</span>
+  name<span class="token punctuation">,</span>
+  password<span class="token punctuation">,</span>
+  avatarUrl<span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div></li> <li>返回参数
+<ul><li>成功<div class="language-json extra-class"><pre class="language-json"><code>status<span class="token operator">:</span><span class="token number">0</span><span class="token punctuation">,</span>
+                message<span class="token operator">:</span>'修改成功'<span class="token punctuation">,</span>
+</code></pre></div></li> <li>失败<div class="language-json extra-class"><pre class="language-json"><code>status<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">,</span>
+message<span class="token operator">:</span>'密码错误'<span class="token punctuation">,</span>
+</code></pre></div><div class="language-json extra-class"><pre class="language-json"><code>status<span class="token operator">:</span><span class="token number">1</span><span class="token punctuation">,</span>
+message<span class="token operator">:</span>'用户名不存在'<span class="token punctuation">,</span>
+</code></pre></div></li></ul></li></ul></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/tiangouVuepress/userInfo/userInfo.html" class="prev">
+        用户信息接口
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/tiangouVuepress/assets/js/app.e2521a8e.js" defer></script><script src="/tiangouVuepress/assets/js/2.be4ad1e4.js" defer></script><script src="/tiangouVuepress/assets/js/8.131f703c.js" defer></script>
+  </body>
+</html>
